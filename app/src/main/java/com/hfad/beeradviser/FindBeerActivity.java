@@ -28,14 +28,10 @@ public class FindBeerActivity extends Activity {
         //Get the selected item in the Spinner
         String beerType = String.valueOf(color.getSelectedItem());
 
-        //Get recommendations from the BeerExpert class
-        List<String> brandsList = expert.getBrands(beerType);
-        StringBuilder brandsFormatted = new StringBuilder();
-        for (String brand : brandsList) {
-            brandsFormatted.append(brand).append('\n');
-        }
+        //TODO: Get recommendations from the BeerExpert class
 
-        //Display the beers
-        brands.setText(brandsFormatted);
+
+        //TODO: Display the brands instead of the beerType using the BeerExpert class
+        brands.setText(beerType);
     }
 }
