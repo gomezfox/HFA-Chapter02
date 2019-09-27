@@ -14,9 +14,16 @@ public class BeerExpert {
         if (color.equals("amber")) {
             brands.add("Jack Amber");
             brands.add("Red Moose");
-        } else {
+        } else if (color.equals("dark")){
             brands.add("Jail Pale Ale");
             brands.add("Gout Stout");
+        } else if (color.equals("light")){
+            brands.add("Stella Artois");
+            brands.add("Heineken");
+        } else if (color.equals("brown")){
+            brands.add("Newcastle");
+        } else {
+            // none (returns empty list)
         }
         return brands;
     }

@@ -29,9 +29,18 @@ public class FindBeerActivity extends Activity {
         String beerType = String.valueOf(color.getSelectedItem());
 
         //TODO: Get recommendations from the BeerExpert class
-
+        //DONE:  Unnecessary here, incorporated into the for loop below
 
         //TODO: Display the brands instead of the beerType using the BeerExpert class
-        brands.setText(beerType);
+        //DONE:  Iterate through brandList and build a multiline string
+        StringBuilder allBrands = new StringBuilder();
+        for (String brandItem:expert.getBrands(beerType))
+        {
+            allBrands.append(brandItem);
+            allBrands.append("\n");
+        }
+
+        brands.setText(allBrands);
+
     }
 }
